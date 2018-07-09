@@ -1,0 +1,97 @@
+body {
+      font-family: serif;
+  }
+
+  .inline {
+  display:inline
+  }
+  .navbar{
+      margin-bottom : 0
+  }
+  .red {
+        background-color: #D50032;
+        color: #e7e7e7;
+  }
+  .gray {
+        background-color: #f8f8f8;
+        border-color: #e7e7e7;
+    }
+    .black{
+        background-color: #000;
+        color: #bdbaba;
+    }
+    .light-black{
+        background-color: #2F2F2F;
+        color: #ffffff;
+        font-weight: bolder;
+        font-size: 15px;
+    }
+    .margin-top-bottom{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .confirm{
+        margin-bottom: 80px;
+        font-family: sans-serif;
+    }
+    .school-text{
+        font-weight: bolder;
+        color: #D50032;
+        margin-bottom: 10px;
+    }
+    .italic{
+        font-style: italic;
+        padding: 10px 0;
+        display: block;
+    }
+    a.navbar-brand {
+	  padding:0;
+	}
+
+	.footer-para{
+	  font-color: white;
+	}
+
+
+
+
+	/* Extra small devices (phones, 600px and down) */
+	@media only screen and (max-width: 600px) {
+	   .img-responsive {
+	   	    display: inline-block;
+	   	    max-height:50px;
+	   	    margin-top:-3px;
+	   	    margin-right:10px;
+	  }
+	}
+
+	@media only screen and (min-width: 768px) {
+		.img-responsive {
+			   	    display: inline-block;
+			   	    max-height:100px;
+			   	    margin-top:-3px;
+			   	    margin-right:10px;
+	  }
+	}
+
+	/* unvisited link */
+	a:link {
+	    color: white;
+	}
+
+	/* visited link */
+	a:visited {
+	    color: white;
+	}
+
+	/* mouse over link */
+	a:hover {
+	    color: gray;
+	}
+
+	/* selected link */
+	a:active {
+	    color: brown;
+	}
+
+

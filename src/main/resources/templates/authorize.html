@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Digi Bank Consent </title>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+
+    <div class="red">
+        <div class="container">
+            <h1 class="margin-top-bottom"><span class="italic">Auth</span><div>CONSENT</div></h1>
+        </div>
+    </div>
+
+<div class="container">
+    <div class="margin-top-bottom confirm">
+        <p>Logged in as: <span th:text="${#httpServletRequest.remoteUser}">demo</span></p>
+
+        <h1 class="margin-top-bottom">Please Confirm</h1>
+        <div th:replace="fragments/account_selection :: accountselection"/>
+
+        <div th:replace="fragments/payment_transaction :: transaction"/>
+        <p>Do you authorize <span th:text="${session.authorizationRequest.clientId}"></span> at <span th:text="${session.authorizationRequest.redirectUri}"></span>  to process the
+            above payment transaction with scope <span th:text="${session.authorizationRequest.scope}"> </span></p>
+
+        <p>Please check if the details correct.Select 'Approve' if you want to proceed with the transaction or Select 'Deny' if you no longer wish to continue</p>
+
+            <ul>
+                <li>
+                    Single Immediate Payment:
+
+                    <form id="confirmationForm" name="confirmationForm"
+                          action="../oauth/authorize" method="post" class="inline">
+                        <input name="user_oauth_approval" value="true" type="hidden" />
+                        <button class="btn btn-primary red" type="submit">Approve</button>
+                    </form>
+
+
+                    <form id="denyForm" name="confirmationForm"
+                          action="../oauth/authorize" method="post"  class="inline">
+                        <input name="user_oauth_approval" value="false" type="hidden" />
+
+                        <button class="btn btn-primary red" type="submit">Deny</button>
+                    </form>
+
+                </li>
+            </ul>
+
+
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer"/>
+</body>
+</html>
+

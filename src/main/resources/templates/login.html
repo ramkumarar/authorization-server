@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Digi Bank Login </title>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+
+<div class="red">
+    <div class="container">
+        <h1 class="margin-top-bottom"><span class="italic">Identity</span><div>VERIFICATION</div></h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <!-- form card login -->
+                    <div class="card rounded-0">
+                        <div class="card-header">
+                            <h1 class="mb-0">Login</h1>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" action="login" method="post">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control form-control-lg rounded-0" name="username" id="username" required=""/>
+                                    <div class="invalid-feedback">Enter your UserName</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control form-control-lg rounded-0" id="password" name="password" required="" autocomplete="new-password"/>
+                                    <div class="invalid-feedback">Enter your Password</div>
+                                </div>
+                                <div>
+                                    <label class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input"/>
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description small text-dark">Remember me on this computer</span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary red" id="btnLogin">Log in</button>
+                                <button type="submit" class="btn btn-primary red" id="btnPassword">Forgot Password</button>
+
+                            </form>
+                        </div>
+                        <!--/card-block-->
+                    </div>
+                    <!-- /form card login -->
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>
+<!--/container-->
+
+
+<div th:replace="fragments/footer :: footer"/>
+</body>
+</html>
+

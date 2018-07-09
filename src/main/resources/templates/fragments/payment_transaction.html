@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="transaction">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h3> Payment details </h3>
+                </div>
+                <div class="card-body ">
+
+                    <dl class="row">
+                        <dt class="col-sm-2">PaymentId</dt>
+                        <dd class="col-sm-10"><span th:text="${session.payment.paymentId}"></span></dd>
+                        <dt class="col-sm-2">Debitor Account</dt>
+                        <dd class="col-sm-10"><span th:text="${session.payment.debitAccount}"></span></dd>
+                        <dt class="col-sm-2">Creditor Account</dt>
+                        <dd class="col-sm-10"><span th:text="${session.payment.creditAccount}"></span></dd>
+                        <dt class="col-sm-2">Creditor Name</dt>
+                        <dd class="col-sm-10"><span th:text="${session.payment.creditorName}"></span></dd>
+                        <dt class="col-sm-2">Amount</dt>
+                        <dd class="col-sm-10"><span th:text="${session.payment.amount}"></span> <span>&#163;</span></dd>
+                        <dt class="col-sm-2">Reference</dt>
+                        <dd class="col-sm-10"><span th:text="${session.payment.reference}"></span></dd>
+                        <dt class="col-sm-2">Date &amp; Time</dt>
+                        <dd class="col-sm-10"><span th:text="${session.payment.dateTime}"></span></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

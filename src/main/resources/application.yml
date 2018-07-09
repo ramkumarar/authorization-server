@@ -1,0 +1,10 @@
+server.contextPath: /auth
+payment:
+   baseurl: http://localhost:8090
+logging:
+ level:
+   org.springframework.security: DEBUG
+server:
+ port: 8080
+keystore:
+  password: mySecretKey
